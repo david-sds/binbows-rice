@@ -137,7 +137,9 @@
 /*
  * Removes border radius from some buttons. 
  */
-
+#nav-bar:not([tabs-hidden="true"]) {
+  box-shadow: none !important;
+}
 .bookmark-item {
   border-radius: unset !important;
 }
@@ -154,19 +156,14 @@ menulist {
 button {
   border-radius: 0px !important;
 }
-toolbarbutton {
+.subviewbutton {
   &:not([disabled]):hover {
     background-color: #aaaaab !important;
     border-radius: unset !important;
   }
 }
-background-color: #aaaaab;
-    border-radius: unset !important;
 .dialogBox {
   &:not(.spotlightBox) {
     border-radius: 0px !important;
   }
-}
-searchbar {
-  
 }
