@@ -1,5 +1,4 @@
-* {
-  -GtkScrollbar-has-backward-stepper: true;
+* { -GtkScrollbar-has-backward-stepper: true;
   -GtkScrollbar-has-forward-stepper: true;
   -GtkScrollbar-has-secondary-backward-stepper: false;
   -GtkScrollbar-has-secondary-forward-stepper: false;
@@ -193,15 +192,15 @@ iconview text:selected:backdrop, iconview text selection:backdrop {
 
 /* Rubberband and flowbox */
 
+
 rubberband, flowbox rubberband, treeview.view rubberband, 
 .content-view rubberband, .rubberband, view rubberband, 
 .view.rubberband, .rubberband {
-   	border-width: 1px;
-   	border-style: dotted; //solid;
-   	border-color: #ff0000; //@theme_selected_bg_color;
-   	background: none;
-   	background-color: alpha(#ff0000, 0.01);//alpha(@theme_selected_bg_color, 0.3);
-
+   border-width: 1px;
+   border-style: dotted; 
+   border-color: #ff0000;
+   background: none;
+   background-color: alpha(#ff0000, 0.01);
 }
 
 flowbox flowboxchild {
