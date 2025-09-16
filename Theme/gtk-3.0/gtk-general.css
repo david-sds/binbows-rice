@@ -49,9 +49,11 @@
   color: @theme_disabled_fg_color;
   background-color: @theme_disabled_bg_color; }
 
+/* RETRO THEME CUSTOM WINDOW BAR COLOR */
 .gtkstyle-fallback:selected {
   color: @theme_selected_fg_color;
-  background-color: @theme_selected_bg_color; }
+  background-color: @custom_topbar_color;
+}
 
 
 /* Hyperlink color */

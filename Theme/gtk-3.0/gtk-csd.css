@@ -36,7 +36,8 @@ decoration {
 
 
 .titlebar {
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+}
 
 headerbar {
   border-bottom: 1px solid @dark_shadow;
@@ -46,11 +47,14 @@ headerbar {
   padding-bottom: 0;
   padding-left: 3px;
   padding-right: 2px;
-  background-image: linear-gradient(to right, @active_title_color1, @active_title_color); }
+  background-color: @custom_topbar_color;
+  color: @custom_topbar_color;
+}
 
 headerbar:backdrop {
   border-color: transparent;
-  background-image: linear-gradient(to right, @inactive_title_color, @inactive_title_color1) }
+  background-image: linear-gradient(to right, @inactive_title_color, @inactive_title_color1);
+}
 
 headerbar:first-child {
   margin-left: 6px; }

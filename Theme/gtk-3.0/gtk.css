@@ -3,7 +3,7 @@
 @define-color fg_color #000000;
 @define-color base_color #FFFFFF;
 @define-color text_color #000000;
-@define-color selected_bg_color #000080;
+@define-color selected_bg_color #008081;
 @define-color selected_fg_color #FFFFFF;
 @define-color light_shadow #FFFFFF;
 @define-color dark_shadow #868686;
@@ -22,8 +22,8 @@
 @define-color inactive_title_color #989898;
 @define-color inactive_title_color1 #C0C0C0;
 @define-color inactive_title_text #C0C0C0;
-/* begin */
 
+@define-color custom_topbar_color #000080;
 
 /* Import widgets */
 @import url("gtk-general.css");
