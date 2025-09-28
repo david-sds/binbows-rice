@@ -29,15 +29,20 @@
 /* Defines the 3d effect in private browsing. */
 	--pb-95convex:inset -1px -1px var(--pb-3d-darkest),inset 1px 1px var(--pb-3d-lightest),inset -2px -2px var(--pb-3d-dark),inset 2px 2px var(--pb-3d-light);
 	--pb-95concave:inset -1px -1px var(--pb-3d-lightest),inset 1px 1px var(--pb-3d-dark),inset -2px -2px var(--pb-3d-light),inset 2px 2px var(--pb-3d-darkest);
-
-/* REMOVES BORDERS FROM BUTTONS (RETRO) */
+  
+  /* REMOVES BORDERS FROM BUTTONS (RETRO) */
 	--urlbar-icon-border-radius: 0px !important;
-	-button-background-color-ghost-active: #aaaaab;
+	--button-background-color-ghost-active: #aaaaab;
+  /* REDUCED HEIGHT (RETRO) */
+	--tab-min-height: 16px !important;
 }
 
 
 .tabbrowser-tab[label^="New Tab"] .tab-icon-image {
-      content: url("ff-std-alt.svg") !important;
+     content: url("ff-std-alt.svg") !important;
+}
+.tabbrowser-tab{
+    padding: 0 1px 0 1px !important;
 }
 
 #nav-bar:not([tabs-hidden="true"]) {
@@ -47,18 +52,42 @@
     background-color: var(--95grey) !important;
 }
 .tab-background[selected]{
- 	box-shadow: var(--95convex)  !important;
-	border-radius:0 !important;
-    background-color: var(--95grey) !important;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
     background-image: none !important;
+
+    /* The core of the new effect: a perfect checkerboard */
+    background-color: #ffffff !important;
+    background-image: repeating-conic-gradient(
+        #c0c0c0 0% 25%,
+        #ffffff 0% 50%
+    ) !important;
+    /* Sets the size of each repeating checkerboard square to 2px */
+    background-size: 2px 2px !important;
 }
+.tab-background[selected] > .tab-text {
+    font-weight: bold !important;
+}
+
 .tab-background{
-    border-radius: 0px !important;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-radius: 4px 4px 0 0 !important;
+    margin: 0px !important;
+    margin-top: 4px !important;
+}
+#TabsToolbar-customization-target {
+  height: 36px !important;
 }
 .tab-content{
     color: var(--button-colour) !important;
+    margin-top: 4px !important;
 }
-
+#TabsToolbar .toolbarbutton-1 {
+  align-self: end !important;
+}
 #TabsToolbar .tabs-newtab-button:hover {
     border-radius:0 !important;
 }
@@ -72,20 +101,20 @@
     border-radius: 0px !important;
     box-shadow: var(--95concave) !important;
 }
-#urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within{
-    border:1px solid #000080 !important;
-}
-#searchbar-background{
+#urlbar {
     background-color:var(--urlbar-bg) !important;
     outline: none !important;
     border:none !important;
     border-radius: 0px !important;
     box-shadow: var(--95concave) !important;
 }
-#searchbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within{
-    border:1px solid #000080 !important;
+#searchbar{
+    background-color:var(--urlbar-bg) !important;
+    outline: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    box-shadow: var(--95concave) !important;
 }
-
 .toolbarbutton-1{
     border-radius: 0px !important;
     color: #0a0a0a !important;
@@ -166,4 +195,41 @@ button {
   &:not(.spotlightBox) {
     border-radius: 0px !important;
   }
+}
+#navigator-toolbox {
+	margin: 1px !important;
+	border: 1px solid #ffffff !important;
+	outline: 1px solid #868686 !important;
+}
+#toolbar-menubar {
+	border-bottom: 1px solid #868686 !important;
+}
+#TabsToolbar {
+	border-top: 1px solid #ffffff !important;
+	border-bottom: 1px solid #868686 !important;
+} 
+#nav-bar {
+	border-top: 1px solid #ffffff !important;
+	--border-bottom: 1px solid #868686 !important;
+}
+#PersonalToolbar {
+	--border-top: 1px solid #ffffff !important;
+}
+
+#TabsToolbar toolbarbutton {
+	margin: 2px !important;
+	width: 32px !important;
+  	height: 32px !important;
+}
+#TabsToolbar toolbarbutton:hover {
+	background-color: var(--toolbarbutton-hover-background) !important;
+	image {
+		background-color: transparent !important;
+	}
+}
+#TabsToolbar toolbarbutton:hover stack {
+  	background-color: transparent !important;
+}
+#TabsToolbar toolbarbutton image:hover {
+	background-color: transparent !important;
 }
