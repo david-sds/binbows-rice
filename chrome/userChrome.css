@@ -272,134 +272,103 @@ button {
   background-color: transparent !important;
 }
 
-/* CUSTOM BUTTON ICONS */
 
-#back-button {
-  list-style-image: none !important;
+
+/* CUSTOM BUTTON ICONS */
+.toolbarbutton-animatable-box * {
+  display: none !important;
 }
 
-#back-button image {
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: 0 0 !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
+
+/* BACK-BUTTON */
+#back-button {
+  list-style-image: none !important;
+  background: url("icons/back.png") center / 60% no-repeat;
+  background-position-x: 65%;
+  image-rendering: pixelated;
+}
+
+#back-button[disabled] {
+  background: url("icons/back_disabled.png") center / 60% no-repeat;
+  background-position-x: 65%;
 }
 
 #back-button:not([disabled]):hover image {
   box-shadow: var(--95convex) !important;
   background-color: transparent !important;
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: 0px -32px !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
 }
 
+/* FORWARD-BUTTON */
 #forward-button {
   list-style-image: none !important;
+  background: url("icons/forward.png") center / 70% no-repeat;
+  background-position-x: 55%;
+  image-rendering: pixelated;
 }
 
-#forward-button image {
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: -32px 0 !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
+#forward-button[disabled] {
+  background: url("icons/forward_disabled.png") center / 70% no-repeat;
+  background-position-x: 55%;
 }
 
 #forward-button:not([disabled]):hover image {
   box-shadow: var(--95convex) !important;
   background-color: transparent !important;
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: -32px -32px !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
 }
 
+
+/* RELOAD-BUTTON */
 #reload-button {
   list-style-image: none !important;
+  background: url("icons/reload.png") center / 60% no-repeat;
+  background-position-x: 55%;
+  image-rendering: pixelated;
 }
 
-#reload-button image {
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: -64px 0 !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
+#reload-button[disabled] {
+  background: url("icons/reload_disabled.png") center / 60% no-repeat;
+  background-position-x: 55%;
 }
 
 #reload-button:not([disabled]):hover image {
   box-shadow: var(--95convex) !important;
   background-color: transparent !important;
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: -64px -32px !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
 }
 
+
+/* STOP-BUTTON */
 #stop-button {
   list-style-image: none !important;
+  background: url("icons/cancel.png") center / 60% no-repeat;
+  background-position-x: 50%;
+  image-rendering: pixelated;
 }
 
-#stop-button image {
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: -96px 0 !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
+#stop-button[disabled] {
+  background: url("icons/cancel_disabled.png") center / 60% no-repeat;
+  background-position-x: 50%;
 }
 
 #stop-button:not([disabled]):hover image {
   box-shadow: var(--95convex) !important;
   background-color: transparent !important;
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: -96px -32px !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
 }
 
+
+/* HOME-BUTTON */
 #home-button {
   list-style-image: none !important;
+  background: url("icons/home.png") center / 60% no-repeat;
+  background-position-x: 50%;
+  image-rendering: pixelated;
 }
 
-#home-button image {
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: -128px 0 !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
+#home-button[disabled] {
+  background: url("icons/home_disabled.png") center / 60% no-repeat;
+  background-position-x: 50%;
 }
 
 #home-button:not([disabled]):hover image {
   box-shadow: var(--95convex) !important;
   background-color: transparent !important;
-  background-image: url("toolbar.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: -128px -32px !important;
-  background-size: auto !important;
-  width: 32px !important;
-  height: 32px !important;
-  scale: .75 !important;
 }
