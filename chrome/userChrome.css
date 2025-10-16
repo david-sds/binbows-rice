@@ -251,7 +251,6 @@ button {
 }
 
 #TabsToolbar toolbarbutton {
-  margin: 2px !important;
   width: 32px !important;
   height: 32px !important;
 }
@@ -275,10 +274,27 @@ button {
 
 
 /* CUSTOM BUTTON ICONS */
+
+/* REMOVE ANIMATIONS FROM RELOAD-CANCEL */
 .toolbarbutton-animatable-box * {
   display: none !important;
 }
 
+/* CLOSE TAB BUTTON */
+.tab-close-button {
+  list-style-image: none !important;
+  background: url("icons/close.png") center / 60% no-repeat;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.tab-close-button:hover {
+  list-style-image: none !important;
+  background: url("icons/cancel.png") center / 60% no-repeat;
+  width: 24px !important;
+  height: 24px !important;
+  background-color: transparent !important;
+}
 
 /* BACK-BUTTON */
 #back-button {
@@ -293,10 +309,6 @@ button {
   background-position-x: 65%;
 }
 
-#back-button:not([disabled]):hover image {
-  box-shadow: var(--95convex) !important;
-  background-color: transparent !important;
-}
 
 /* FORWARD-BUTTON */
 #forward-button {
@@ -311,10 +323,6 @@ button {
   background-position-x: 55%;
 }
 
-#forward-button:not([disabled]):hover image {
-  box-shadow: var(--95convex) !important;
-  background-color: transparent !important;
-}
 
 
 /* RELOAD-BUTTON */
@@ -330,10 +338,6 @@ button {
   background-position-x: 55%;
 }
 
-#reload-button:not([disabled]):hover image {
-  box-shadow: var(--95convex) !important;
-  background-color: transparent !important;
-}
 
 
 /* STOP-BUTTON */
@@ -349,10 +353,6 @@ button {
   background-position-x: 50%;
 }
 
-#stop-button:not([disabled]):hover image {
-  box-shadow: var(--95convex) !important;
-  background-color: transparent !important;
-}
 
 
 /* HOME-BUTTON */
@@ -368,7 +368,48 @@ button {
   background-position-x: 50%;
 }
 
-#home-button:not([disabled]):hover image {
-  box-shadow: var(--95convex) !important;
-  background-color: transparent !important;
+
+#downloads-button {
+  list-style-image: none !important;
+  background: url("icons/download.png") center / 60% no-repeat;
+  background-position-x: 50%;
+  image-rendering: pixelated;
+}
+
+#downloads-indicator-anchor {
+  list-style-image: none !important;
+}
+
+#PanelUI-menu-button {
+  list-style-image: none !important;
+  background: url("icons/menu.png") center / 60% no-repeat;
+  background-position-x: 30%;
+  image-rendering: pixelated;
+}
+
+.toolbarbutton-badge-stack {
+  height: 32px !important;
+}
+
+#PlacesChevron {
+  list-style-image: url('icons/more.png') !important;
+}
+
+#OtherBookmarks .toolbarbutton-icon {
+  list-style-image: url('icons/folder.png') !important;
+}
+
+
+#tabs-newtab-button {
+  list-style-image: none !important;
+  padding: 0 !important;
+  margin-left: 2px !important;
+  background: url("icons/add.png") center / 50% no-repeat;
+  background-position-x: 50%;
+  image-rendering: pixelated;
+}
+
+#tabs-newtab-button .toolbarbutton-icon {
+  width: 32px !important;
+  height: 32px !important;
 }
