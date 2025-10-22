@@ -392,7 +392,7 @@ button {
 }
 
 #PlacesChevron {
-  list-style-image: url('icons/more.png') !important;
+  list-style-image: url('icons/chevron_right.png') !important;
 }
 
 #OtherBookmarks .toolbarbutton-icon {
@@ -412,4 +412,73 @@ button {
 #tabs-newtab-button .toolbarbutton-icon {
   width: 32px !important;
   height: 32px !important;
+}
+
+#tracking-protection-icon {
+  list-style-image: url("icons/protection.png");
+}
+
+#tracking-protection-icon-box[hasException] #tracking-protection-icon {
+  list-style-image: url("icons/protection_disabled.png");
+}
+
+#identity-icon {
+  list-style-image: url("icons/locked.png") !important;
+}
+
+.notSecure #identity-icon {
+  list-style-image: url("icons/locked_disabled.png") !important;
+}
+
+#reader-mode-button[readeractive] image {
+  list-style-image: url("icons/book.png") !important;
+}
+
+#reader-mode-button image {
+  list-style-image: url("icons/book_disabled.png") !important;
+}
+
+
+#star-button {
+  width: 32px !important;
+  height: 32px !important;
+  list-style-image: none !important;
+  background: url("icons/bookmark_disabled.png") center / 85% no-repeat;
+  background-position-x: 75%;
+  background-position-y: 30%;
+  image-rendering: pixelated;
+}
+
+#star-button[starred] {
+  list-style-image: none !important;
+  background: url("icons/bookmark.png") center / 85% no-repeat;
+}
+
+#star-button-box {
+  padding: 0px !important;
+}
+
+#permissions-granted-icon {
+  list-style-image: url("icons/config.png") !important;
+}
+
+#picture-in-picture-button[pipactive]>.urlbar-icon {
+  list-style-image: url("icons/expand.png") !important;
+}
+
+#picture-in-picture-button>.urlbar-icon {
+  list-style-image: url("icons/expand_disabled.png") !important;
+}
+
+.searchmode-switcher-icon,
+.searchbar-search-icon {
+  list-style-image: url("icons/search.png") !important;
+}
+
+.toolbarbutton-combined-buttons-dropmarker {
+  list-style-image: url("icons/chevron_down.png") !important;
+}
+
+.autoplay-media-icon {
+  list-style-image: url("icons/autoplay.png") !important;
 }
