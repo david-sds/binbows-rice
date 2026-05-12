@@ -119,12 +119,32 @@
   box-shadow: var(--95concave) !important;
 }
 
-#searchbar {
+#urlbar-background {
+  border-radius: 0;
+}
+
+#searchbar-new {
   background-color: var(--urlbar-bg) !important;
   outline: none !important;
   border: none !important;
   border-radius: 0px !important;
   box-shadow: var(--95concave) !important;
+}
+
+.urlbar-background {
+  border-radius: 0 !important;
+}
+
+.urlbar-input-container * {
+  border-radius: 0 !important;
+}
+
+.urlbarView-row {
+  border-radius: 0 !important;
+}
+
+.urlbarView-button-menu {
+  border-radius: 0 !important;
 }
 
 .toolbarbutton-1 {
@@ -280,6 +300,11 @@ button {
   display: none !important;
 }
 
+/* BOOKMARK FOLDERS */
+#PlacesToolbarItems image.toolbarbutton-icon[type="menu"] {
+  list-style-image: url("icons/folder.png") !important;
+}
+
 /* CLOSE TAB BUTTON */
 .tab-close-button {
   list-style-image: none !important;
@@ -369,6 +394,7 @@ button {
 }
 
 
+/* DOWNLOADS-BUTTON */
 #downloads-button {
   list-style-image: none !important;
   background: url("icons/download.png") center / 60% no-repeat;
@@ -414,11 +440,11 @@ button {
   height: 32px !important;
 }
 
-#tracking-protection-icon {
+#trust-icon-container.secure #trust-icon {
   list-style-image: url("icons/protection.png");
 }
 
-#tracking-protection-icon-box[hasException] #tracking-protection-icon {
+#trust-icon-container.insecure #trust-icon {
   list-style-image: url("icons/protection_disabled.png");
 }
 
@@ -481,4 +507,8 @@ button {
 
 .autoplay-media-icon {
   list-style-image: url("icons/autoplay.png") !important;
+}
+
+.tab-audio-button[soundplaying] span {
+  list-style-image: url("icons/audio.png") !important;
 }
